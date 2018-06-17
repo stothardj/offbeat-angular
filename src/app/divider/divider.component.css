@@ -1,0 +1,22 @@
+.divider {
+    width: 100vw;
+    display: flex;
+}
+
+.divider-side {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.divider-title {
+    padding: 1em;
+    color: #006699;
+}
+
+.divider-lines {
+    width: 100%;
+    border-top: solid 2px #006699;
+    border-bottom: solid 2px #006699;
+    height: 1em;
+}

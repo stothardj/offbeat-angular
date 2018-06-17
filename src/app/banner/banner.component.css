@@ -1,0 +1,35 @@
+.banner {
+    list-style-type: none;
+    display: flex;
+    color: #00a99d;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.banner-item {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.banner-title {
+    border-top: 5px solid #00a99d;
+    border-bottom: 5px solid #00a99d;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    font-size: large;
+}
+
+.banner-logo {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.banner-logo img {
+    max-width: 20vw;
+    max-height: 20vw;
+}

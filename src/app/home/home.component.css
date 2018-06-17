@@ -1,0 +1,15 @@
+.insert {
+    color: white;
+    background-color: black;
+    display: inline;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.blurb {
+    color: white;
+    background-color: #00a99d;
+    padding: 10px;
+    margin-top: 20px;
+}
