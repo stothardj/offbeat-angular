@@ -2,21 +2,24 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const http = require('http');
+const request = require('request');
 
 const app = express();
+
+const UPCOMING_EVENTS = 'https://api.meetup.com/Offbeat-Fun/events?photo-host=public&page=20&sig_id=214474886&sig=c8c6b6f5ac38abae010127a30e600755a3438e13';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'dist/offbeat-site')));
 
-app.get('/api/upcoming', (req, res) => {
-    res.send(JSON.stringify([
-	{ name: 'From the server! Glow-in-the-dark Kan-jam' },
-	{ name: 'Game Jam (Make Board Games)' },
-	{ name: 'Monthly Matinee (Jurassic World: Fallen Kingdom)' },
-	{ name: 'Music Lounge' }
-    ]));
+app.get('/api/upcoming', (req, res, next) => {
+    request(UPCOMING_EVENTS, { json: true }, (err, res2, body) => {
+	if (err) {
+	    next(err);
+	}
+	res.send(JSON.stringify(body));
+    });
 });
 
 app.get('*', (req, res) => {
