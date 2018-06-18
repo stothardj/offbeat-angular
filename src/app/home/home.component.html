@@ -11,4 +11,9 @@
     join us for some random fun!</p>
 </div>
 <divider title="Upcoming Events"></divider>
+<ul class="upcoming-events">
+  <li *ngFor="let event of events">
+    {{ event.name }}
+  </li>
+</ul>
 <divider title="Recent Events"></divider>
