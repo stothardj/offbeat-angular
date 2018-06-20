@@ -15,7 +15,7 @@ export class EventService {
     constructor(private http: HttpClient) { }
 
     getEvents(): Observable<EventInfo[]> {
-	return this.http.get<EventInfo[]>(this.upcomingEventsUrl);
-	// return of(EVENTS);
+	// return this.http.get<EventInfo[]>(this.upcomingEventsUrl);
+	return of(EVENTS);
     }
 }

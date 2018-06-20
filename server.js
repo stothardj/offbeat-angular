@@ -6,7 +6,8 @@ const request = require('request');
 
 const app = express();
 
-const UPCOMING_EVENTS = 'https://api.meetup.com/Offbeat-Fun/events?photo-host=public&page=20&sig_id=214474886&sig=c8c6b6f5ac38abae010127a30e600755a3438e13';
+const UPCOMING_EVENTS = 'https://api.meetup.com/Offbeat-Fun/events?photo-host=public&page=20&sig_id=214474886&fields=featured_photo&sig=8e7af2aa0e7353d753ec0982281716debee34a4b';
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

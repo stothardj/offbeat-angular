@@ -13,7 +13,7 @@
 <divider title="Upcoming Events"></divider>
 <ul class="upcoming-events">
   <li *ngFor="let event of events">
-    {{ event.name }}
+    <upcoming-event-card [event]="event"></upcoming-event-card>
   </li>
 </ul>
 <divider title="Recent Events"></divider>
