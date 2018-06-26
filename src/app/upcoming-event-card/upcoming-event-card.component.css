@@ -1,0 +1,44 @@
+.upcoming-event-card {
+    display: grid;
+    box-shadow: 0 0 20px 5px #bbb;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    grid-template-rows: 70px auto 50px;
+}
+
+.upcoming-date-box {
+    background-color: white;
+    color: #d61d3f;
+    text-align: center;
+    padding: 5px;
+}
+
+.upcoming-img {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.upcoming-short-date {
+    white-space: nowrap;
+}
+
+.upcoming-start-time {
+    color: black;
+    font-size: small;
+    white-space: nowrap;
+}
+
+.upcoming-name {
+    color: white;
+    background-color: #d61d3f;
+    flex: 1 1 auto;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.upcoming-top-banner {
+    display: flex;
+}
+

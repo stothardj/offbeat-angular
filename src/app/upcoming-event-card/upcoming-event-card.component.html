@@ -1,8 +1,14 @@
-<p>
-  <img src="{{ event.featured_photo.photo_link }}">
-  {{ dayOfWeek }}
-  {{ shortDate }}
-  {{ startTime }}
-  {{ event.name }}
-  {{ formattedStart }}
-</p>
+<div class="upcoming-event-card">
+  <div class="upcoming-top-banner">
+    <div class="upcoming-date-box">
+      <div class="upcoming-day">{{ dayOfWeek }}</div>
+      <div class="upcoming-short-date">{{ shortDate }}</div>
+      <div class="upcoming-start-time">{{ startTime }}</div>
+    </div>
+    <div class="upcoming-name">{{ event.name }}</div>
+  </div>
+  <div class="upcoming-img" [style.background-image]="'url('+event.featured_photo.photo_link+')'"></div>
+  <div class="upcoming-bot-banner">
+    <div class="upcoming-start">{{ formattedStart }}</div>
+  </div>
+</div>
