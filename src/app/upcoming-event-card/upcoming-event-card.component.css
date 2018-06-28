@@ -5,7 +5,8 @@
     height: 400px;
     overflow: hidden;
     border-radius: 5px;
-    grid-template-rows: 70px auto 50px;
+    grid-template-rows: 70px auto 70px;
+    margin: 10px;
 }
 
 .upcoming-date-box {
@@ -36,6 +37,15 @@
     flex: 1 1 auto;
     font-weight: bold;
     padding: 15px;
+}
+
+.upcoming-start {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.upcoming-description {
+    word-break: break-word;
 }
 
 .upcoming-top-banner {

@@ -13,6 +13,7 @@ export class UpcomingEventCardComponent implements OnInit {
     dayOfWeek: string;
     shortDate: string;
     startTime: string;
+    shortDesc: string;
 
     constructor() { }
 
@@ -32,5 +33,8 @@ export class UpcomingEventCardComponent implements OnInit {
 	} else {
 	    this.picUrl = '';
 	}
+	const el = document.createElement('div');
+	el.innerHTML = this.event.description;
+	this.shortDesc = el.textContent;
     }
 }
