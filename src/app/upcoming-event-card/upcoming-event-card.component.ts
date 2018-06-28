@@ -8,6 +8,7 @@ import { EventInfo } from '../event-info';
 })
 export class UpcomingEventCardComponent implements OnInit {
     @Input() event: EventInfo;
+    picUrl: string
     formattedStart: string;
     dayOfWeek: string;
     shortDate: string;
@@ -26,5 +27,10 @@ export class UpcomingEventCardComponent implements OnInit {
 	this.dayOfWeek = d.toLocaleDateString(undefined, {weekday: 'short'});
 	this.shortDate = d.toLocaleDateString(undefined, {month: 'short', day: 'numeric'});
 	this.startTime = d.toLocaleTimeString(undefined, {hour: 'numeric', minute: '2-digit'});
+	if (this.event.featured_photo) {
+	    this.picUrl = `url(${this.event.featured_photo.photo_link})`;
+	} else {
+	    this.picUrl = '';
+	}
     }
 }

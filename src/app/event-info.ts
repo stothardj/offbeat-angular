@@ -1,9 +1,10 @@
-export class EventPhoto {
+export interface EventPhoto {
     photo_link: string;
 }
 
-export class EventInfo {
+export interface EventInfo {
     name: string;
     time: number;
-    featured_photo: EventPhoto;
+    description: string;
+    featured_photo?: EventPhoto;
 }
