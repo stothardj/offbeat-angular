@@ -8,12 +8,14 @@ import { EventInfo } from '../event-info';
 })
 export class UpcomingEventCardComponent implements OnInit {
     @Input() event: EventInfo;
+    @Input() index: number;
     picUrl: string
     formattedStart: string;
     dayOfWeek: string;
     shortDate: string;
     startTime: string;
     shortDesc: string;
+    style: string;
 
     constructor() { }
 
@@ -36,5 +38,6 @@ export class UpcomingEventCardComponent implements OnInit {
 	const el = document.createElement('div');
 	el.innerHTML = this.event.description;
 	this.shortDesc = el.textContent;
+	this.style = "style" + (this.index % 4);
     }
 }
