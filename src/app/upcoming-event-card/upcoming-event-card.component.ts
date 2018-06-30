@@ -9,6 +9,8 @@ import { EventInfo } from '../event-info';
 export class UpcomingEventCardComponent implements OnInit {
     @Input() event: EventInfo;
     @Input() index: number;
+    @Input() mini; boolean;
+    
     picUrl: string
     formattedStart: string;
     dayOfWeek: string;
@@ -39,5 +41,8 @@ export class UpcomingEventCardComponent implements OnInit {
 	el.innerHTML = this.event.description;
 	this.shortDesc = el.textContent;
 	this.style = "style" + (this.index % 4);
+	if (this.mini) {
+	    this.style += " mini";
+	}
     }
 }

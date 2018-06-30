@@ -13,7 +13,7 @@
 <divider title="Upcoming Events"></divider>
 <div class="upcoming-events">
   <div *ngFor="let event of events; let i = index">
-    <upcoming-event-card [event]="event" [index]="i"></upcoming-event-card>
+    <upcoming-event-card [event]="event" [index]="i" [mini]="i > 0"></upcoming-event-card>
   </div>
 </div>
 <divider title="Recent Events"></divider>
