@@ -2,14 +2,14 @@ import { Component, OnInit, Input } from '@angular/core';
 import { EventInfo } from '../event-info';
 
 @Component({
-  selector: 'upcoming-event-card',
-  templateUrl: './upcoming-event-card.component.html',
-  styleUrls: ['./upcoming-event-card.component.css']
+    selector: 'upcoming-event-card',
+    templateUrl: './upcoming-event-card.component.html',
+    styleUrls: ['./upcoming-event-card.component.css']
 })
 export class UpcomingEventCardComponent implements OnInit {
     @Input() event: EventInfo;
     @Input() index: number;
-    @Input() mini; boolean;
+    @Input() mini: boolean;
     
     picUrl: string
     formattedStart: string;

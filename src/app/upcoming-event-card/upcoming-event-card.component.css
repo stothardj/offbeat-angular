@@ -7,6 +7,12 @@
     border-radius: 5px;
     grid-template-rows: 70px auto 70px;
     margin: 10px;
+    transition: transform 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.upcoming-event-card:hover {
+    transform: scale(1.05);
 }
 
 .mini.upcoming-event-card {
@@ -82,6 +88,7 @@
 
 .upcoming-bot-banner {
     overflow: hidden;
+    background-color: white;
 }
 
 .mini .upcoming-bot-banner {
