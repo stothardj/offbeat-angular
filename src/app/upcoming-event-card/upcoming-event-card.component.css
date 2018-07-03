@@ -1,18 +1,15 @@
 .upcoming-event-card {
     display: grid;
-    box-shadow: 0 0 20px 5px #bbb;
-    width: 400px;
-    height: 400px;
+    box-shadow: 0 0 5px 5px #ddd;
+    height: 490px;
     overflow: hidden;
     border-radius: 5px;
     grid-template-rows: 70px auto 70px;
     margin: 10px;
-    transition: transform 0.2s;
-    transition-timing-function: ease-in;
 }
 
 .upcoming-event-card:hover {
-    transform: scale(1.05);
+    box-shadow: 0 0 5px 5px #bbb;
 }
 
 .mini.upcoming-event-card {

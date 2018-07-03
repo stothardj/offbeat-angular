@@ -14,6 +14,13 @@
     margin-top: 20px;
 }
 
+.upcoming-events {
+    column-count: auto;
+    column-width: 400px;
+    height: 600px;
+    overflow: hidden;
+}
+
 .upcoming-events div {
     display: inline-block;
 }
