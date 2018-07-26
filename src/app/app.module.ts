@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
 import { UpcomingEventCardComponent } from './upcoming-event-card/upcoming-event-card.component';
+import { RecentEventCardComponent } from './recent-event-card/recent-event-card.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { UpcomingEventCardComponent } from './upcoming-event-card/upcoming-event
 	DividerComponent,
 	EventsComponent,
 	HomeComponent,
-	UpcomingEventCardComponent
+	UpcomingEventCardComponent,
+	RecentEventCardComponent
     ],
     imports: [
 	BrowserModule,

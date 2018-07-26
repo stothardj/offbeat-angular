@@ -15,6 +15,7 @@
 }
 
 .upcoming-events {
+    display: column;
     column-count: auto;
     column-width: 400px;
     height: 600px;
@@ -22,5 +23,17 @@
 }
 
 .upcoming-events div {
+    display: inline-block;
+}
+
+.recent-events {
+    display: column;
+    column-count: auto;
+    column-width: 300px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.recent-events div {
     display: inline-block;
 }

@@ -8,16 +8,23 @@ import { EventInfo } from '../event-info';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    events: EventInfo[];
+    upcomingEvents: EventInfo[];
+    recentEvents: EventInfo[];
 
     constructor(private eventService: EventService) { }
 
     ngOnInit() {
-	this.getEvents();
+	this.getUpcomingEvents();
+	this.getRecentEvents();
     }
 
-    getEvents(): void {
-	this.eventService.getEvents()
-	    .subscribe(events => this.events = events);
+    getUpcomingEvents(): void {
+	this.eventService.getUpcomingEvents()
+	    .subscribe(events => this.upcomingEvents = events);
+    }
+
+    getRecentEvents(): void {
+	this.eventService.getRecentEvents()
+	    .subscribe(events => this.recentEvents = events);
     }
 }

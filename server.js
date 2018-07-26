@@ -8,6 +8,7 @@ const app = express();
 
 const UPCOMING_EVENTS = 'https://api.meetup.com/Offbeat-Fun/events?photo-host=public&page=20&sig_id=214474886&fields=featured_photo&sig=8e7af2aa0e7353d753ec0982281716debee34a4b';
 
+const RECENT_EVENTS = 'https://api.meetup.com/Offbeat-Fun/events?desc=true&scroll=recent_past&photo-host=public&page=20&sig_id=214474886&status=past&fields=featured_photo&sig=6b50b41c8fae13945fad775d95dfc0d8adf8f50a';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,6 +23,16 @@ app.get('/api/upcoming', (req, res, next) => {
 	res.send(JSON.stringify(body));
     });
 });
+
+app.get('/api/recent', (req, res, next) => {
+    request(RECENT_EVENTS, { json: true }, (err, res2, body) => {
+	if (err) {
+	    next(err);
+	}
+	res.send(JSON.stringify(body));
+    });
+});
+
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/offbeat-site/index.html'));

@@ -4,7 +4,7 @@
     height: 490px;
     overflow: hidden;
     border-radius: 5px;
-    grid-template-rows: 70px auto 70px;
+    grid-template-rows: 70px auto 80px;
     margin: 10px;
 }
 
@@ -14,7 +14,7 @@
 
 .mini.upcoming-event-card {
     height: 150px;
-    grid-template-rows: 80px auto;
+    grid-template-rows: 70px auto;
     grid-template-columns: auto 150px;
 }
 
@@ -28,6 +28,8 @@
 .upcoming-img {
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #bbb;
 }
 
 .mini .upcoming-img {
@@ -86,6 +88,7 @@
 .upcoming-bot-banner {
     overflow: hidden;
     background-color: white;
+    padding: 10px;
 }
 
 .mini .upcoming-bot-banner {

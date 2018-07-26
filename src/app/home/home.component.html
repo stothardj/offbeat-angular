@@ -12,8 +12,13 @@
 </div>
 <divider title="Upcoming Events"></divider>
 <div class="upcoming-events">
-  <div *ngFor="let event of events; let i = index">
+  <div *ngFor="let event of upcomingEvents; let i = index">
     <upcoming-event-card [event]="event" [index]="i" [mini]="i > 0"></upcoming-event-card>
   </div>
 </div>
 <divider title="Recent Events"></divider>
+<div class="recent-events">
+  <div *ngFor="let event of recentEvents; let i = index">
+    <recent-event-card [event]="event" [index]="i"></recent-event-card>
+  </div>
+</div>
